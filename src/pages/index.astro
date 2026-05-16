@@ -1,0 +1,674 @@
+---
+import '../styles/global.css';
+
+const companyName = "C&Co Logistics Solutions";
+const phonePrimary = "(240) 601-5815";   // Numéro de Cedrick
+const phoneSecondary = "(240) 854-2806"; // Numéro du cousin
+---
+
+<html lang="en" class="scroll-smooth scroll-pt-12 md:scroll-pt-20">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="generator" content={Astro.generator} />
+
+		<!-- SEO Meta Tags -->
+		<meta name="description" content="Looking for reliable movers in Maryland? C&Co Logistics Solutions offers top-rated residential and commercial moving, packing, and secure transport services in the DMV area. Get a free quote today!" />
+		<meta name="keywords" content="moving company Maryland, residential movers, commercial moving DMV, packing services, local movers, moving services DC Virginia" />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href="https://www.ccologistics.com/" />
+
+		<!-- Open Graph (Pour un bel affichage si on partage le lien sur Facebook, iMessage, etc.) -->
+		<meta property="og:title" content="C&Co Logistics Solutions - Maryland's Premier Movers" />
+		<meta property="og:description" content="Stress-free moving services in Maryland and the DMV area. Fully licensed and insured. Get a free quote today!" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.ccologistics.com/" />
+		<meta property="og:image" content="https://www.ccologistics.com/hero-moving.png" />
+		<meta property="og:image:alt" content="Professional moving team in Maryland" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="C&Co Logistics Solutions - Maryland's Premier Movers" />
+		<meta name="twitter:description" content="Professional moving company in Maryland, DC & Virginia. Licensed, insured, and 5-star rated." />
+		<meta name="twitter:image" content="https://www.ccologistics.com/hero-moving.png" />
+
+		<!-- Schema Markup (JSON-LD) pour le SEO Local -->
+		<script type="application/ld+json">
+		{
+		"@context": "https://schema.org",
+		"@type": "MovingCompany",
+		"name": "C&Co Logistics Solutions",
+		"image": "https://www.ccologistics.com/logo.png",
+		"@id": "https://www.ccologistics.com/",
+		"url": "https://www.ccologistics.com/",
+		"telephone": "+1-240-601-5815",
+		"priceRange": "$$",
+		"address": {
+			"@type": "PostalAddress",
+			"addressRegion": "MD",
+			"addressCountry": "US"
+		},
+		"areaServed": [
+			{
+			"@type": "State",
+			"name": "Maryland"
+			},
+			{
+			"@type": "State",
+			"name": "Virginia"
+			},
+			{
+			"@type": "City",
+			"name": "Washington D.C."
+			}
+		],
+		"openingHoursSpecification": {
+			"@type": "OpeningHoursSpecification",
+			"dayOfWeek": [
+			"Monday",
+			"Tuesday",
+			"Wednesday",
+			"Thursday",
+			"Friday",
+			"Saturday"
+			],
+			"opens": "08:00",
+			"closes": "18:00"
+		},
+		"description": "Professional and reliable moving company based in Maryland. We offer residential, commercial, and packing services across the DMV area.",
+		"aggregateRating": {
+			"@type": "AggregateRating",
+			"ratingValue": "5.0",
+			"ratingCount": "3",
+			"bestRating": "5",
+			"worstRating": "1"
+		},
+		"review": [
+			{
+			"@type": "Review",
+			"author": {
+				"@type": "Person",
+				"name": "Sarah M."
+			},
+			"datePublished": "2026-04-01",
+			"description": "C&Co made our relocation from Baltimore to Annapolis seamless. The crew was on time, polite, and handled our fragile items with extreme care. Highly recommend!",
+			"name": "Excellent Moving Experience",
+			"reviewRating": {
+				"@type": "Rating",
+				"ratingValue": "5"
+			}
+			},
+			{
+			"@type": "Review",
+			"author": {
+				"@type": "Person",
+				"name": "David R."
+			},
+			"datePublished": "2026-03-01",
+			"description": "Fast, professional, and very transparent with their pricing. There were no hidden fees at the end of the day. They took the stress completely out of our move.",
+			"name": "Great Transparent Pricing",
+			"reviewRating": {
+				"@type": "Rating",
+				"ratingValue": "5"
+			}
+			},
+			{
+			"@type": "Review",
+			"author": {
+				"@type": "Person",
+				"name": "Michael T."
+			},
+			"datePublished": "2026-02-01",
+			"description": "I had a lot of heavy office equipment to move. The team showed up prepared and got everything transferred without a single scratch. Excellent service.",
+			"name": "Professional Office Move",
+			"reviewRating": {
+				"@type": "Rating",
+				"ratingValue": "5"
+			}
+			}
+		]
+		}
+		</script>
+
+		<title>{companyName} - Maryland's Premier Moving Service</title>
+	</head>
+	<body class="bg-slate-50 font-sans text-slate-800 antialiased">
+		
+		<!-- Navigation -->
+		<header class="w-full sticky top-0 z-50 shadow-md">
+    
+    <!-- 1. Top Bar (Informations Utilitaires) -->
+    <div class="bg-slate-900 text-slate-300 text-xs py-2.5 hidden md:block border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div class="flex space-x-6">
+                <!-- Horaires -->
+                <div class="flex items-center gap-1.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-green-500" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Mon - Sat: 8:00 AM - 6:00 PM</span>
+                </div>
+                <!-- Zone d'intervention -->
+                <div class="flex items-center gap-1.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-green-500" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                    </svg>
+                    <span>Serving Maryland, DC & Virginia</span>
+                </div>
+            </div>
+            <!-- Email -->
+            <div class="flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-green-500" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                </svg>
+                <a href="mailto:contact@ccologistics.com" class="hover:text-white transition focus:outline-none focus:ring-2 focus:ring-green-500 px-1 rounded">contact@ccologistics.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Main Navigation (Barre Principale) -->
+    <div class="bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                
+                <!-- Logo et Nom -->
+                <a href="/" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-green-500 rounded px-2 py-1">
+                    <img src="/logo.png" alt="C&Co Logistics Solutions Logo" class="h-14 md:h-16 w-auto object-contain transition transform group-hover:scale-105" />
+                    <div class="flex flex-col">
+                        <span class="text-xl md:text-2xl font-black text-slate-900 tracking-tight leading-none">
+                            {companyName}
+                        </span>
+                        <span class="text-[10px] md:text-xs font-bold text-green-600 uppercase tracking-widest mt-1">
+                            Moving & Storage
+                        </span>
+                    </div>
+                </a>
+                
+                <!-- Liens de Navigation (Bureau) -->
+                <nav class="hidden lg:flex space-x-8 font-bold text-sm text-slate-600" aria-label="Main navigation">
+                    <a href="#services" class="hover:text-green-600 transition focus:outline-none focus:ring-2 focus:ring-green-500 rounded px-2 py-1">Our Services</a>
+                    <a href="#about" class="hover:text-green-600 transition focus:outline-none focus:ring-2 focus:ring-green-500 rounded px-2 py-1">Why Us</a>
+                    <a href="#reviews" class="hover:text-green-600 transition focus:outline-none focus:ring-2 focus:ring-green-500 rounded px-2 py-1">Reviews</a>
+                    <a href="#faq" class="hover:text-green-600 transition focus:outline-none focus:ring-2 focus:ring-green-500 rounded px-2 py-1">FAQ</a>
+                </nav>
+                
+                <!-- Contact Rapide et Bouton -->
+                <div class="flex items-center space-x-6">
+                    <div class="hidden md:flex flex-col items-end">
+                        <span class="text-[11px] text-slate-500 font-bold uppercase tracking-wider">Call for a free quote</span>
+                        <a href={`tel:${phonePrimary}`} class="font-extrabold text-xl text-slate-900 hover:text-green-600 transition flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-green-500 rounded px-2 py-1">
+                            {phonePrimary}
+                        </a>
+                        <a href={`tel:${phoneSecondary}`} class="text-xs text-slate-500 hover:text-green-600 transition focus:outline-none focus:ring-2 focus:ring-green-500 rounded px-1">
+                            Alt: {phoneSecondary}
+                        </a>
+                    </div>
+                    
+                    <a href="#quote" class="bg-green-500 hover:bg-green-600 text-white font-extrabold py-3 px-6 rounded-lg shadow-lg shadow-green-500/30 transition transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-green-700">
+                        Get a Quote
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+		<!-- Hero Section -->
+		<section class="relative bg-slate-100 py-20 lg:py-32 overflow-hidden">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center relative z-10">
+				<div class="lg:w-1/2 mb-12 lg:mb-0 pr-0 lg:pr-12">
+					<h1 class="text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-slate-900">
+						Reliable Moving in <span class="text-green-600">Maryland</span> & Beyond
+					</h1>
+					<p class="text-xl text-slate-600 mb-8 leading-relaxed">
+						Whether you're moving across town or across the state, {companyName} delivers a stress-free, secure, and fully licensed moving experience.
+					</p>
+					<div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+						<a href="#quote" class="text-center bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 px-8 rounded shadow-lg transition focus:outline-none focus:ring-2 focus:ring-slate-700">
+							Request Free Estimate
+						</a>
+						<a href={`sms:${phonePrimary}`} class="text-center bg-white border-2 border-slate-300 hover:border-slate-400 text-slate-800 font-bold py-4 px-8 rounded transition focus:outline-none focus:ring-2 focus:ring-green-500">
+							Text Us Now
+						</a>
+					</div>
+				</div>
+				<!-- Image Hero -->
+				<div class="lg:w-1/2 w-full mt-10 lg:mt-0">
+    <img 
+        src="/hero-moving.png" 
+        alt="Professional moving team in Maryland loading a truck" 
+        class="w-full h-auto object-cover rounded-2xl shadow-2xl border-4 border-white"
+        loading="eager"
+    />
+</div>
+			</div>
+		</section>
+
+		<!-- Services Section -->
+		<section id="services" class="py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-black text-slate-900 sm:text-4xl tracking-tight">Our Moving Services</h2>
+            <p class="mt-4 text-xl text-slate-500 max-w-2xl mx-auto">Tailored relocation solutions designed to make your move as smooth and stress-free as possible.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+            
+            <!-- Service 1: Residential -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-shadow duration-300 group border border-slate-100 focus-within:ring-2 focus-within:ring-green-500">
+                <!-- Conteneur de l'image avec effet de zoom -->
+                <div class="relative h-56 overflow-hidden">
+                    <img 
+                        src="/ResidentialMoving.jpg" 
+                        alt="Professional residential moving services in Maryland" 
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out" 
+                        loading="lazy"
+                    />
+                    <!-- Overlay sombre léger pour l'esthétique -->
+                    <div class="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition duration-300"></div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3">Residential Moving</h3>
+                    <p class="text-slate-600 leading-relaxed">Full-service home relocations. We handle your furniture, appliances, and memories with the utmost care, from apartments to large estates.</p>
+                </div>
+            </div>
+
+            <!-- Service 2: Commercial -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-shadow duration-300 group border border-slate-100 focus-within:ring-2 focus-within:ring-green-500">
+                <div class="relative h-56 overflow-hidden">
+                    <img 
+                        src="/CommercialMoves.jpg" 
+                        alt="Professional commercial and office moving services" 
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out" 
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition duration-300"></div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3">Commercial Moves</h3>
+                    <p class="text-slate-600 leading-relaxed">Minimize your business downtime. We provide efficient, organized office relocations tailored to your specific corporate schedule.</p>
+                </div>
+            </div>
+
+            <!-- Service 3: Packing -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-shadow duration-300 group border border-slate-100 focus-within:ring-2 focus-within:ring-green-500">
+                <div class="relative h-56 overflow-hidden">
+                    <img 
+                        src="/PackingUnpacking.jpg" 
+                        alt="Professional packing and unpacking services for fragile items" 
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out" 
+                        loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition duration-300"></div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3">Packing & Unpacking</h3>
+                    <p class="text-slate-600 leading-relaxed">Don't want to pack? Our expert team provides premium packing materials and secure boxing services to protect your fragile items.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+		<!-- Why Us / About Section -->
+<section id="about" class="py-24 bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+            
+            <!-- Image Side -->
+            <div class="lg:w-1/2 relative w-full">
+                <!-- Arrière-plan décoratif (carré vert incliné) -->
+                <div class="absolute -inset-4 bg-green-100 rounded-3xl transform rotate-3 -z-10"></div>
+                
+                <!-- Image d'illustration -->
+                <img 
+                    src="/team.jpg" 
+                    alt="C&Co Logistics professional moving team" 
+                    class="w-full h-auto rounded-2xl shadow-xl object-cover"
+                    loading="lazy"
+                />
+                
+                <!-- Badge flottant (Visible sur grand écran) -->
+                <div class="absolute -bottom-6 -right-6 bg-slate-900 text-white p-6 rounded-xl shadow-2xl hidden md:block border-2 border-slate-800">
+                    <p class="text-4xl font-black text-green-400">100%</p>
+                    <p class="text-sm font-bold uppercase tracking-wider mt-1">Customer<br/>Satisfaction</p>
+                </div>
+            </div>
+
+            <!-- Text Side -->
+            <div class="lg:w-1/2">
+                <h2 class="text-3xl font-black text-slate-900 sm:text-4xl tracking-tight mb-6">
+                    Why Choose <span class="text-green-600">{companyName}</span>?
+                </h2>
+                <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                    Moving doesn't have to be overwhelming. As a premier moving company based in Maryland, we combine logistics expertise with genuine care for your belongings. We don't just move boxes; we move lives.
+                </p>
+                
+                <!-- Feature List -->
+                <div class="space-y-8">
+                    <!-- Feature 1: Licensed & Insured -->
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-slate-50 border border-slate-200 text-green-600 rounded-xl flex items-center justify-center shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-slate-900">Licensed & Fully Insured</h4>
+                            <p class="text-slate-600 mt-1 leading-relaxed">Your peace of mind is our priority. We are fully compliant with state regulations to protect your assets from start to finish.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 2: Transparent Pricing -->
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-slate-50 border border-slate-200 text-green-600 rounded-xl flex items-center justify-center shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-slate-900">Transparent Pricing</h4>
+                            <p class="text-slate-600 mt-1 leading-relaxed">No hidden fees, no last-minute surprises. We provide clear, upfront estimates so you can budget with absolute confidence.</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3: Local Experts -->
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-slate-50 border border-slate-200 text-green-600 rounded-xl flex items-center justify-center shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-slate-900">Local Maryland Experts</h4>
+                            <p class="text-slate-600 mt-1 leading-relaxed">We know the neighborhoods, the traffic patterns, and the complex logistics of moving in and out of the DMV area.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Reviews / Testimonials Section -->
+<section id="reviews" class="py-24 bg-white border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-black text-slate-900 sm:text-4xl tracking-tight">What Our Customers Say</h2>
+            <p class="mt-4 text-lg text-slate-500">Don't just take our word for it. Read about our 5-star moving experiences.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Review 1 -->
+            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm relative">
+                <div class="flex text-yellow-400 mb-4 space-x-1">
+                    <!-- 5 Etoiles -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" /></svg>
+                </div>
+                <p class="text-slate-700 italic mb-6 leading-relaxed">"C&Co made our relocation from Baltimore to Annapolis seamless. The crew was on time, polite, and handled our fragile items with extreme care. Highly recommend!"</p>
+                <div class="font-extrabold text-slate-900">- Sarah M.</div>
+                <div class="text-xs text-slate-500 mt-1">Moved in April 2026</div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm relative">
+                <div class="flex text-yellow-400 mb-4 space-x-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" /></svg>
+                    <!-- ... Tu peux copier-coller les 4 autres SVG d'étoiles ici ... -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" /></svg>
+                </div>
+                <p class="text-slate-700 italic mb-6 leading-relaxed">"Fast, professional, and very transparent with their pricing. There were no hidden fees at the end of the day. They took the stress completely out of our move."</p>
+                <div class="font-extrabold text-slate-900">- David R.</div>
+                <div class="text-xs text-slate-500 mt-1">Moved in March 2026</div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm relative">
+                <div class="flex text-yellow-400 mb-4 space-x-1">
+                    <!-- ... Étoiles ... -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" /></svg>
+                </div>
+                <p class="text-slate-700 italic mb-6 leading-relaxed">"I had a lot of heavy office equipment to move. The team showed up prepared and got everything transferred without a single scratch. Excellent service."</p>
+                <div class="font-extrabold text-slate-900">- Michael T.</div>
+                <div class="text-xs text-slate-500 mt-1">Moved in February 2026</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- FAQ Section -->
+<section id="faq" class="py-24 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-black text-slate-900 sm:text-4xl tracking-tight">Frequently Asked Questions</h2>
+            <p class="mt-4 text-lg text-slate-600">Got questions? We've got answers to help you prepare for your move.</p>
+        </div>
+
+        <div class="space-y-4">
+            <!-- Question 1 -->
+            <details class="group bg-white rounded-lg shadow-sm border border-slate-200 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-6 text-slate-900 font-bold text-lg">
+                    How far in advance should I book my move?
+                    <span class="relative h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 h-5 w-5 opacity-100 group-open:opacity-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 h-5 w-5 opacity-0 group-open:opacity-100 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4" />
+                        </svg>
+                    </span>
+                </summary>
+                <div class="px-6 pb-6 text-slate-600 leading-relaxed">
+                    We recommend booking at least 2 to 4 weeks in advance, especially if you are planning to move during the summer months or at the end of a month, which are our busiest times. However, we always try to accommodate last-minute requests when possible!
+                </div>
+            </details>
+
+            <!-- Question 2 -->
+            <details class="group bg-white rounded-lg shadow-sm border border-slate-200 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-6 text-slate-900 font-bold text-lg">
+                    Are my belongings insured during the move?
+                    <span class="relative h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 h-5 w-5 opacity-100 group-open:opacity-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 h-5 w-5 opacity-0 group-open:opacity-100 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4" />
+                        </svg>
+                    </span>
+                </summary>
+                <div class="px-6 pb-6 text-slate-600 leading-relaxed">
+                    Yes, absolutely. {companyName} is fully licensed and insured. We provide basic valuation coverage at no extra charge, and we also offer full-value protection options for clients who want extra peace of mind for high-value items.
+                </div>
+            </details>
+
+            <!-- Question 3 -->
+            <details class="group bg-white rounded-lg shadow-sm border border-slate-200 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-6 text-slate-900 font-bold text-lg">
+                    Do you provide packing boxes and materials?
+                    <span class="relative h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 h-5 w-5 opacity-100 group-open:opacity-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 h-5 w-5 opacity-0 group-open:opacity-100 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4" />
+                        </svg>
+                    </span>
+                </summary>
+                <div class="px-6 pb-6 text-slate-600 leading-relaxed">
+                    Yes! We can provide a full range of packing materials, including high-quality boxes, bubble wrap, packing paper, and tape. You can choose to pack yourself, or let our professional team handle the packing and unpacking for you.
+                </div>
+            </details>
+        </div>
+        
+        <!-- Call to Action miniature -->
+        <div class="text-center mt-10">
+            <p class="text-slate-600 mb-4">Still have questions?</p>
+            <a href={`tel:${phonePrimary}`} class="inline-flex items-center gap-2 text-green-600 font-bold hover:text-slate-900 transition">
+                Give us a call at {phonePrimary}
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+		<!-- Quote / Contact Form Section -->
+		<section id="quote" class="py-20 bg-slate-900 text-white">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-12">
+					<h2 class="text-3xl font-extrabold sm:text-4xl">Get Your Free Quote</h2>
+					<p class="mt-4 text-lg text-slate-400">Fill out the details below and we'll get back to you with an estimate within 24 hours.</p>
+				</div>
+				
+				<form id="quote-form" action="https://formspree.io/f/meenydlg" method="POST" class="bg-white p-8 rounded-xl shadow-2xl space-y-6 text-slate-800" novalidate>
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+		<div>
+			<label for="form-name" class="block text-sm font-bold text-slate-700 mb-2">Full Name <span class="text-red-600" aria-label="required">*</span></label>
+			<input 
+				type="text" 
+				id="form-name"
+				name="name" 
+				required 
+				class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition" 
+				placeholder="John Doe"
+				aria-required="true">
+		</div>
+		<div>
+			<label for="form-phone" class="block text-sm font-bold text-slate-700 mb-2">Phone Number <span class="text-red-600" aria-label="required">*</span></label>
+			<input 
+				type="tel" 
+				id="form-phone"
+				name="phone" 
+				required 
+				class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition" 
+				placeholder="(555) 000-0000"
+				aria-required="true">
+		</div>
+	</div>
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+		<div>
+			<label for="form-zip-from" class="block text-sm font-bold text-slate-700 mb-2">Moving From (Zip Code) <span class="text-red-600" aria-label="required">*</span></label>
+			<input 
+				type="text" 
+				id="form-zip-from"
+				name="zip_from" 
+				required 
+				class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition" 
+				placeholder="e.g. 20740"
+				aria-required="true">
+		</div>
+		<div>
+			<label for="form-zip-to" class="block text-sm font-bold text-slate-700 mb-2">Moving To (Zip Code) <span class="text-red-600" aria-label="required">*</span></label>
+			<input 
+				type="text" 
+				id="form-zip-to"
+				name="zip_to" 
+				required 
+				class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition" 
+				placeholder="e.g. 21201"
+				aria-required="true">
+		</div>
+	</div>
+	<div>
+		<label for="form-details" class="block text-sm font-bold text-slate-700 mb-2">Move Date & Details <span class="text-red-600" aria-label="required">*</span></label>
+		<textarea 
+			id="form-details"
+			name="details" 
+			required 
+			rows="4" 
+			class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition" 
+			placeholder="Tell us about the size of your move (e.g., 2-bedroom apartment)..."
+			aria-required="true"></textarea>
+	</div>
+	<button 
+		type="submit" 
+		class="w-full bg-green-500 hover:bg-green-600 text-slate-900 font-extrabold py-4 px-8 rounded-lg shadow-lg transition text-lg focus:outline-none focus:ring-2 focus:ring-green-700"
+		aria-label="Submit quote request">
+		Submit Request
+	</button>
+</form>
+
+		<!-- Le message de succès (caché par défaut grâce à la classe 'hidden') -->
+<div id="form-success" class="hidden bg-green-100 border-l-4 border-green-500 text-green-700 p-8 rounded-xl shadow-lg mt-6" role="alert" aria-live="polite">
+    <h3 class="text-2xl font-bold mb-2">Thank you!</h3>
+    <p>Your quote request has been received. Our team will contact you shortly.</p>
+</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-slate-950 text-slate-400 py-12 text-center">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
+        <!-- Rappel du logo dans le footer (optionnel mais très pro) -->
+        <img src="/logo.png" alt="C&Co Logistics Solutions Logo" class="h-12 w-auto opacity-75 mb-4 grayscale hover:grayscale-0 transition" />
+        
+        <h2 class="text-2xl font-bold text-white mb-4">{companyName}</h2>
+        <p>Serving Maryland and surrounding areas.</p>
+        
+        <div class="mt-4 flex flex-col md:flex-row justify-center gap-4 md:gap-8">
+            <p>Primary: <a href={`tel:${phonePrimary}`} class="text-green-400 hover:underline font-bold focus:outline-none focus:ring-2 focus:ring-green-400 rounded px-1">{phonePrimary}</a></p>
+            <p>Secondary: <a href={`tel:${phoneSecondary}`} class="text-green-400 hover:underline focus:outline-none focus:ring-2 focus:ring-green-400 rounded px-1">{phoneSecondary}</a></p>
+        </div>
+        
+        <div class="mt-8 pt-8 border-t border-slate-800 text-sm w-full">
+            &copy; 2026 {companyName}. All rights reserved.
+        </div>
+    </div>
+</footer>
+<script>
+    const form = document.getElementById('quote-form');
+    const successMessage = document.getElementById('form-success');
+
+    if (form) {
+        form.addEventListener('submit', async (event) => {
+            // Empêche la redirection par défaut de Formspree
+            event.preventDefault();
+
+            // Récupère les données du formulaire
+            const formData = new FormData(form);
+
+            try {
+                // Envoie les données en arrière-plan
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Si ça marche : on cache le formulaire et on affiche le message
+                    form.style.display = 'none';
+                    successMessage.classList.remove('hidden');
+                } else {
+                    alert("Oops! There was a problem submitting your form.");
+                }
+            } catch (error) {
+                alert("Oops! There was a network error. Please try again.");
+            }
+        });
+    }
+</script>
+	</body>
+</html>
