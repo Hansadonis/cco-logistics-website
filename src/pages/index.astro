@@ -24,7 +24,7 @@ const phoneSecondary = "(240) 854-2806"; // Numéro du cousin
 		<meta property="og:description" content="Stress-free moving services in Maryland and the DMV area. Fully licensed and insured. Get a free quote today!" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://www.ccologistics.com/" />
-		<meta property="og:image" content="https://www.ccologistics.com/hero-moving.png" />
+		<meta property="og:image" content="https://www.ccologistics.com/hero-moving.webp" />
 		<meta property="og:image:alt" content="Professional moving team in Maryland" />
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
@@ -33,7 +33,7 @@ const phoneSecondary = "(240) 854-2806"; // Numéro du cousin
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content="C&Co Logistics Solutions - Maryland's Premier Movers" />
 		<meta name="twitter:description" content="Professional moving company in Maryland, DC & Virginia. Licensed, insured, and 5-star rated." />
-		<meta name="twitter:image" content="https://www.ccologistics.com/hero-moving.png" />
+		<meta name="twitter:image" content="https://www.ccologistics.com/hero-moving.webp" />
 
 		<!-- Schema Markup (JSON-LD) pour le SEO Local -->
 		<script type="application/ld+json">
@@ -41,7 +41,7 @@ const phoneSecondary = "(240) 854-2806"; // Numéro du cousin
 		"@context": "https://schema.org",
 		"@type": "MovingCompany",
 		"name": "C&Co Logistics Solutions",
-		"image": "https://www.ccologistics.com/logo.png",
+		"image": "https://www.ccologistics.com/webp.png",
 		"@id": "https://www.ccologistics.com/",
 		"url": "https://www.ccologistics.com/",
 		"telephone": "+1-240-601-5815",
@@ -177,7 +177,7 @@ const phoneSecondary = "(240) 854-2806"; // Numéro du cousin
                 
                 <!-- Logo et Nom -->
                 <a href="/" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-green-500 rounded px-2 py-1">
-                    <img src="/logo.png" alt="C&Co Logistics Solutions Logo" class="h-14 md:h-16 w-auto object-contain transition transform group-hover:scale-105" />
+                    <img src="/logo.webp" alt="C&Co Logistics Solutions Logo" class="h-14 md:h-16 w-auto object-contain transition transform group-hover:scale-105" />
                     <div class="flex flex-col">
                         <span class="text-xl md:text-2xl font-black text-slate-900 tracking-tight leading-none">
                             {companyName}
@@ -240,7 +240,7 @@ const phoneSecondary = "(240) 854-2806"; // Numéro du cousin
 				<!-- Image Hero -->
 				<div class="lg:w-1/2 w-full mt-10 lg:mt-0">
     <img 
-        src="/hero-moving.png" 
+        src="/hero-moving.webp" 
         alt="Professional moving team in Maryland loading a truck" 
         class="w-full h-auto object-cover rounded-2xl shadow-2xl border-4 border-white"
         loading="eager"
@@ -265,7 +265,7 @@ const phoneSecondary = "(240) 854-2806"; // Numéro du cousin
                 <!-- Conteneur de l'image avec effet de zoom -->
                 <div class="relative h-56 overflow-hidden">
                     <img 
-                        src="/ResidentialMoving.jpg" 
+                        src="/ResidentialMoving.webp" 
                         alt="Professional residential moving services in Maryland" 
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out" 
                         loading="lazy"
@@ -283,7 +283,7 @@ const phoneSecondary = "(240) 854-2806"; // Numéro du cousin
             <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-shadow duration-300 group border border-slate-100 focus-within:ring-2 focus-within:ring-green-500">
                 <div class="relative h-56 overflow-hidden">
                     <img 
-                        src="/CommercialMoves.jpg" 
+                        src="/CommercialMoves.webp" 
                         alt="Professional commercial and office moving services" 
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out" 
                         loading="lazy"
@@ -300,7 +300,7 @@ const phoneSecondary = "(240) 854-2806"; // Numéro du cousin
             <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-shadow duration-300 group border border-slate-100 focus-within:ring-2 focus-within:ring-green-500">
                 <div class="relative h-56 overflow-hidden">
                     <img 
-                        src="/PackingUnpacking.jpg" 
+                        src="/PackingUnpacking.webp" 
                         alt="Professional packing and unpacking services for fragile items" 
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out" 
                         loading="lazy"
@@ -328,7 +328,7 @@ const phoneSecondary = "(240) 854-2806"; // Numéro du cousin
                 
                 <!-- Image d'illustration -->
                 <img 
-                    src="/team.jpg" 
+                    src="/team.webp" 
                     alt="C&Co Logistics professional moving team" 
                     class="w-full h-auto rounded-2xl shadow-xl object-cover"
                     loading="lazy"
@@ -567,25 +567,25 @@ const phoneSecondary = "(240) 854-2806"; // Numéro du cousin
 	</div>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 		<div>
-			<label for="form-zip-from" class="block text-sm font-bold text-slate-700 mb-2">Moving From (Zip Code) <span class="text-red-600" aria-label="required">*</span></label>
+			<label for="form-zip-from" class="block text-sm font-bold text-slate-700 mb-2">Moving From (Address) <span class="text-red-600" aria-label="required">*</span></label>
 			<input 
 				type="text" 
 				id="form-zip-from"
-				name="zip_from" 
+				name="address_from" 
 				required 
 				class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition" 
-				placeholder="e.g. 20740"
+				placeholder="e.g. 123 Main St, Baltimore, MD"
 				aria-required="true">
 		</div>
 		<div>
-			<label for="form-zip-to" class="block text-sm font-bold text-slate-700 mb-2">Moving To (Zip Code) <span class="text-red-600" aria-label="required">*</span></label>
+			<label for="form-zip-to" class="block text-sm font-bold text-slate-700 mb-2">Moving To (Address) <span class="text-red-600" aria-label="required">*</span></label>
 			<input 
 				type="text" 
 				id="form-zip-to"
-				name="zip_to" 
+				name="address_to" 
 				required 
 				class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition" 
-				placeholder="e.g. 21201"
+				placeholder="e.g. 456 Oak Ave, Annapolis, MD"
 				aria-required="true">
 		</div>
 	</div>
@@ -620,7 +620,7 @@ const phoneSecondary = "(240) 854-2806"; // Numéro du cousin
 		<footer class="bg-slate-950 text-slate-400 py-12 text-center">
     <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
         <!-- Rappel du logo dans le footer (optionnel mais très pro) -->
-        <img src="/logo.png" alt="C&Co Logistics Solutions Logo" class="h-12 w-auto opacity-75 mb-4 grayscale hover:grayscale-0 transition" />
+        <img src="/logo.webp" alt="C&Co Logistics Solutions Logo" class="h-12 w-auto opacity-75 mb-4 grayscale hover:grayscale-0 transition" />
         
         <h2 class="text-2xl font-bold text-white mb-4">{companyName}</h2>
         <p>Serving Maryland and surrounding areas.</p>
